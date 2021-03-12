@@ -88,7 +88,7 @@
           margin: 0 15px 0 26px;
         }
       }
-      .sidebar-link > .active, .sidebar-link:hover {
+      .sidebar-link.active, .sidebar-link:hover {
         border-left: 3px solid $primary;
         background-color: white;
         color: $primary;
