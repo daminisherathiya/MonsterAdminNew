@@ -1,0 +1,106 @@
+.navbar {
+  padding: 0;
+  border-bottom: 1px solid $card-border-color;
+
+  .navbar-header {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 2px;
+    @include media-breakpoint-down(lg) {
+      padding-left: 5px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+    }
+  }
+  .sidebar-toggler {
+    margin-left: 15px;
+  }
+  .navbar-toggler {
+    margin-right: 15px;
+  }
+  .navbar-brand {
+    padding: 0 $topbar-navbrand-padding;
+    line-height: $topbar-navlink-height;
+    @include media-breakpoint-down(lg) {
+      margin-right: 0;
+    }
+    .logo-text {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+      @include media-breakpoint-down(md) {
+        display: inline-block;
+      }
+    }
+  }
+  .navbar-collapse {
+    padding: $navbar-collapse-padding;
+    &.show {
+      @include media-breakpoint-down(md) {
+        display: flex;
+      }
+    }
+  }
+  .dropdown-toggle {
+    .ti-angle-down {
+      font-size: 13px;
+      color: $down-arrow-color;
+      margin-left: 1px;
+    }
+    span {
+      color: $gray-700;
+      font-size: 15px;
+      font-weight: $font-weight-normal;
+      margin-left: 7px;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .navbar-nav {
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-direction: row;
+    }
+    .nav-item > .nav-link {
+      line-height: $topbar-navlink-height;
+      font-size: $topbar-navlink-font-size;
+      padding: 0 $topbar-navlink-padding;
+      color: $gray-500;
+      height: $topbar-navlink-height;
+    }
+    .dropdown-menu {
+      position: absolute;
+    }
+    .input-group {
+      border: 1px solid $input-border-color;
+      box-shadow: none;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+      & .form-control {
+        box-shadow: none;
+        padding: 6px 72px 6px 0px;
+      }
+      & .input-group-text {
+        color: $gray-400;
+      }
+      & .form-control::placeholder {
+        font-weight: $font-weight-normal;
+      }
+    }
+  }
+  .navbar-nav:nth-child(3) > .nav-item > .nav-link {
+    padding: 0;
+  }
+
+}
+
+
+
+
