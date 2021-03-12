@@ -54,9 +54,6 @@
       font-size: 15px;
       font-weight: $font-weight-normal;
       margin-left: 7px;
-      @include media-breakpoint-down(sm) {
-        display: none;
-      }
     }
     &::after {
       display: none;
@@ -95,7 +92,7 @@
       }
     }
   }
-  .navbar-nav:nth-child(3) > .nav-item > .nav-link {
+  .navbar-nav:nth-child(3) > .nav-item > .nav-link{
     padding: 0;
   }
 

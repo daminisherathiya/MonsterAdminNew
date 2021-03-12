@@ -22,30 +22,6 @@
     transform: rotate(-135deg) translate(0, -50%);
 }
 
-@mixin small-width-sidebar() {
-  width: $sidebar-width-mini;
-  .sidebar-nav {
-    ul {
-      .sidebar-title {
-        i {
-          display: block;
-        }
-      }
-      .hide-menu {
-        display: none;
-      }
-      .sidebar-link {
-        i {
-            margin: 0 17px;
-          }
-      }
-    }
-  }
-  .has-arrow::after {
-    display: none;
-  } 
-}
-
 // sidebar
 .sidebar-nav {
   ul {
@@ -68,9 +44,9 @@
   width: $sidebar-width-full;
   background-color: $sidebar-background-color;
   overflow: auto;
-  // @include media-breakpoint-between(md,lg) {
-  //   width: $sidebar-width-mini;
-  // }
+  @include media-breakpoint-down(sm) {
+    left: -265px;
+  }
   .sidebar-nav {
     ul {
       .sidebar-title {
@@ -81,16 +57,8 @@
         padding-left: 23px;
         i {
           display: none;
-          // @include media-breakpoint-between(md,lg) {
-          //   display: block;
-          // }
         }
       }
-      // .hide-menu {
-      //   @include media-breakpoint-between(md,lg) {
-      //     display: none;
-      //   }
-      // }
       .nav-devider {
         padding: 8px;
       }
@@ -118,9 +86,6 @@
           color: $gray-500;
           font-size: $sidebar-link-font-size;
           margin: 0 15px 0 26px;
-          // @include media-breakpoint-between(md,lg) {
-          //   margin: 0 17px;
-          // }
         }
       }
       .sidebar-link > .active, .sidebar-link:hover {
@@ -176,18 +141,41 @@
     border-style: solid;
     border-color: $sidebar-arrow-color;
     @extend %sidebar_arrow_transform;
-    // @include media-breakpoint-between(md,lg) {
-    //   display: none;
-    // }
   }
 }
 
-// small-sidebar
+// for small sidebar
+@mixin small-width-sidebar() {
+  width: $sidebar-width-mini;
+  .sidebar-nav {
+    ul {
+      .sidebar-title {
+        i {
+          display: block;
+        }
+      }
+      .hide-menu {
+        display: none;
+      }
+      .sidebar-link {
+        i {
+            margin: 0 17px;
+          }
+      }
+    }
+  }
+  .has-arrow::after {
+    display: none;
+  } 
+}
+
 .left-sidebar {
   // @include media-breakpoint-between(md,lg) {
   //   @include small-width-sidebar;
   // }
-  &.small-sidebar{
-    @include small-width-sidebar;
+  @include media-breakpoint-up(sm){
+    &.small-sidebar{
+      @include small-width-sidebar;
+    }
   }
 }
