@@ -1,0 +1,29 @@
+.btn-danger,
+.btn-secondary,
+.btn-primary,
+.btn-info,
+.btn-warning,
+.btn-success
+ {
+    color: $white;
+    font-size: 13px;
+    font-weight: $font-weight-medium;
+    &:hover,
+	&:focus,
+	&.disabled,
+	&:disabled,
+	&.active {
+        color: $white;
+    }
+ }
+
+
+ button {
+    .btn-success:hover {
+        background-color: #51c45f;
+    }
+    i {
+        font-size: 13px;
+    }
+}
+  

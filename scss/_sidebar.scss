@@ -44,6 +44,7 @@
   width: $sidebar-width-full;
   background-color: $sidebar-background-color;
   overflow: auto;
+  z-index: 50;
   @include media-breakpoint-down(sm) {
     left: -265px;
   }
@@ -89,14 +90,15 @@
         }
       }
       .sidebar-link.active, .sidebar-link:hover {
-        border-left: 3px solid $primary;
+        border-left: 3px solid $blue-700;
         background-color: white;
-        color: $primary;
+        color: $blue-700;
+        font-weight: $font-weight-medium;
         i {
-          color: $primary;
+          color: $blue-700;
         }
         &.has-arrow::after {
-          border-color: $primary;
+          border-color: $blue-700;
         }
       }
       .sidebar-sublink {
@@ -113,6 +115,7 @@
       }
     }
   }
+  // hover effect on small sidebar
   &:hover.small-sidebar {
     width: $sidebar-width-full;
     .sidebar-nav {
@@ -128,6 +131,8 @@
     }
   }
 }
+
+// sidebar dropdown arrow
 .sidebar-nav .has-arrow {
   position: relative;
   &::after {
@@ -176,6 +181,9 @@
   @include media-breakpoint-up(sm){
     &.small-sidebar{
       @include small-width-sidebar;
+      & + .main-wrapper {
+        margin-left: 60px;
+      }
     }
   }
 }

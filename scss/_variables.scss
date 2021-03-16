@@ -1,15 +1,16 @@
 @import 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet';
+
 // Color system
 
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
+$gray-200: #6b7a8c !default; //.
 $gray-300: #dee2e6 !default;
 $gray-400: #c7ccd7 !default;
 $gray-500: #a6b7bf !default;
 $gray-600: #a6afbb !default;
 $gray-700: #54667a !default;
-$gray-800: #343a40 !default;
+$gray-800: #b7bec8 !default; //.
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
@@ -27,16 +28,24 @@ $grays: (
 ) !default;
 // fusv-enable
 
-$blue:    #11a0f8 !default;
+$blue:    #009efb !default;
 $indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
+$purple:  #745af2 !default;
 $pink:    #d63384 !default;
-$red:     #dc3545 !default;
+$red:     #f62d51 !default;
 $orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #198754 !default;
+$yellow:  #ffbc34 !default;
+$green:   #55ce63 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
+
+$blue-700:    #11a0f8 !default;
+$light-green:     #DCF6DF !default;
+$light-blue:      #CEECFF !default;
+$light-red:       #F9E7EB !default;
+$light-yellow:    #fff8eb !default;
+$light-purple:    #f1effe !default;
+
 
 // scss-docs-start colors-map
 $colors: (
@@ -52,7 +61,12 @@ $colors: (
   "cyan":       $cyan,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "light-green": $light-green,
+  "light-blue": $light-blue,
+  "light-red":  $light-red,
+  "light-yellow":$light-yellow,
+  "light-purple":$light-purple,
 ) !default;
 // scss-docs-end colors-map
 
@@ -64,6 +78,7 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$purple:        $purple !default;        
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
@@ -74,8 +89,15 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "purple":        $purple,
+  "light-green": $light-green,
+  "light-blue": $light-blue,
+  "light-red": $light-red,
+  "light-yellow":   $light-yellow,
+  "light-purple":$light-purple,
 ) !default;
+
 // Navbar
 $navbar-brand-margin-end: 23px;
 
@@ -94,3 +116,98 @@ $font-weight-bolder:          700 !default;
 
 // card
 $card-border-color: #e9f1f3;
+
+// header font size
+$h1-font-size: 36px !default;
+$h2-font-size: 24px !default;
+$h3-font-size: 21px !default;
+$h4-font-size: 16px !default;
+$h5-font-size: 15px !default;
+$h6-font-size: 13px !default;
+
+$headings-color:              $gray-700 !default;
+$headings-font-weight:        $font-weight-medium !default;
+$headings-margin-bottom:      0 !default;
+// $headings-line-height:        1 !default;
+
+// Breadcrumbs
+
+$breadcrumb-font-size:              14px !default;
+
+// form select
+
+$form-select-focus-box-shadow:    unset !default;
+$form-select-focus-border-color:  rgba(0, 0, 0, 0.25) !default;
+$form-select-border-width:        0 !default;
+// $form-select-border-color:        $input-border-color !default;
+$input-color:  $gray-700 !default;
+$input-font-size: 14px !default;
+$input-font-weight: $font-weight-light !default;
+// $form-select-padding-y:             10px !default;
+// $form-select-padding-x:              !default;
+
+// border
+
+$border-radius: 3px !default;
+
+// button
+$input-btn-focus-width:         0 !default;
+$input-btn-font-size:         13px !default;
+$input-btn-padding-y:         0.53125rem !default;
+$input-btn-padding-x:         1.3548125rem !default;
+
+
+// card
+
+$card-border-color:   #e9f1f3 !default;
+$card-border-width:   1px !default;
+$card-border-radius:  0 !default;
+$card-spacer-y:                     1.5rem !default;
+$card-spacer-x:                     1.5625rem !default;
+
+
+$text-muted:                  $gray-200 !default;
+
+// list
+
+$list-group-border-width:           0 !default;
+$list-group-item-padding-y:         6px !default;
+$list-group-item-padding-x:         9px !default;
+
+// scss-docs-start display-headings
+$display-font-sizes: (
+  1: 36px,
+  2: 30px,
+  3: 4rem,
+  4: 19px,
+  5: 14px,
+  6: 2.5rem
+) !default;
+
+$display-font-weight: $font-weight-light;
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1435px
+) !default;
+
+
+// table
+$table-border-color: #eaeef2 !default;
+$table-group-separator-color:  #eaeef2 !default;
+$table-color:                 #647485 !default;
+$table-cell-padding-y:        0.8125rem !default;
+$table-cell-padding-x:        .5rem !default;
+
+// Badges
+
+$badge-font-size:                   12px !default;
+$badge-font-weight:                 $font-weight-normal !default;
+$badge-padding-y:                   4.5px !default;
+$badge-padding-x:                   14px !default;
+$badge-border-radius:               3px !default;

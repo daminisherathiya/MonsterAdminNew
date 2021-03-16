@@ -2,3 +2,39 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: $font-weight-bold;
 }
+.main-wrapper {
+  padding-top: 70px;
+  margin-left: 265px;
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+  }
+  .container-fluid {
+    padding: 25px 32px;
+  }
+}
+a {
+  text-decoration: none;
+  color: $gray-500;
+  &:hover {
+    color: $blue !important;
+  }
+}
+p {
+  margin-bottom: 0;
+}
+.rounded {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+}
+
+.footer {
+  font-size: 14px;
+  color: #b1b9c3;
+  font-weight: $font-weight-normal;
+  margin: 19px 0;
+  a {
+    color: #525c65;
+    font-weight: $font-weight-medium;
+  }
+}

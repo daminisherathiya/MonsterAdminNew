@@ -8,12 +8,14 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/css-chart.css">
   <link rel="stylesheet" href="./apexcharts-bundle/dist/apexcharts.css">
+  <link rel="icon" type="image/png" href="./images/logo-icon.png" />
   <title>Dashboard-1</title>
 </head>
 
 <body>
-  <header>
+  <header class="top-navbar">
     <nav class="navbar navbar-expand-md navbar-light">
       <a class="d-block d-md-none sidebar-toggler" href="javascript:void(0)"><img src="./images/nav-minimizer.png" alt=""></a>
       <div class="navbar-header">
@@ -26,13 +28,14 @@
           </span>
         </a>
         <span class="d-none d-md-block sidebar-toggler ms-0">
-          <img src="./images/nav-minimizer.png" alt="">
+          <a href="#"><img src="./images/nav-minimizer.png" alt=""></a>
         </span>
       </div>
       
-      <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <i class=" fas fa-ellipsis-h"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto ">
@@ -102,7 +105,7 @@
               <span>Mark Sanders</span>
               <i class="ti-angle-down"></i>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li>
@@ -124,10 +127,10 @@
           <span class="hide-menu">PERSONAL</span>
         </li>
         <li>
-          <a class="sidebar-link has-arrow" href="javascript:void(0)"><i class="mdi mdi-speedometer"></i><span class="hide-menu">Dashboard</span></a>
-          <ul class="sidebar-sublink d-none">
+          <a class="sidebar-link has-arrow active" href="javascript:void(0)"><i class="mdi mdi-speedometer"></i><span class="hide-menu">Dashboard</span></a>
+          <ul class="sidebar-sublink">
             <li>
-              <a class="sidebar-link" href="#"><span class="hide-menu">Minimal Version</span></a>
+              <a class="sidebar-link active" href="#"><span class="hide-menu">Minimal Version</span></a>
             </li>
             <li>
               <a class="sidebar-link" href="#"><span class="hide-menu">Complexed One</span></a>
@@ -314,10 +317,450 @@
     </nav>
   </aside>
 
+  <div class="main-wrapper">
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-md-5">
+          <h2 class="page-title">Dashboard</h2>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-md-7">
+          <div class="d-md-flex justify-content-end d-none">
+            <select class="form-select w-auto me-2" aria-label="Default select example">
+              <option selected>January 2017</option>
+              <option value="1">February 2017</option>
+              <option value="2">March 2017</option>
+              <option value="3">April 2017</option>
+            </select>
+            <!-- create button -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-success ps-3"><i class="fas fa-plus-circle"></i> CREATE</button>
+              <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ti-angle-down"></i>
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <script src="./js/jquery.min.js"></script>
+    <div class="container-fluid">
+      <div class="row gx-3">
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h6 class="display-1">86</h6>
+                  <p class="text-muted">New Clients</p>
+                </div>
+                <div>
+                  <div data-label="26%" class="css-bar mb-0 css-bar-success css-bar-20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h6 class="display-1">248</h6>
+                  <p class="text-muted">New Projects</p>
+                </div>
+                <div>
+                  <div data-label="26%" class="css-bar mb-0 css-bar-primary css-bar-20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h6 class="display-1">352</h6>
+                  <p class="text-muted">Open Projects</p>
+                </div>
+                <div>
+                  <div data-label="26%" class="css-bar mb-0 css-bar-info css-bar-20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h6 class="display-1">159</h6>
+                  <p class="text-muted">New Invoices</p>
+                </div>
+                <div>
+                  <div data-label="26%" class="css-bar mb-0 css-bar-danger css-bar-20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div>
+                  <h3>Sales Comparison</h3>
+                  <select class="form-select w-auto" aria-label="Default select example">
+                    <option selected>January 2017</option>
+                    <option value="1">February 2017</option>
+                    <option value="2">March 2017</option>
+                    <option value="3">April 2017</option>
+                  </select>
+                </div>
+                <div class="ms-auto">
+                  <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item">
+                      <h6><i class="fa fa-circle me-2 text-success"></i>MedicalPress Wordpress Theme</h6>
+                    </li>
+                    <li class="list-group-item">
+                      <h6><i class="fa fa-circle me-2 text-primary"></i>HostingPress Wordpress Theme</h6>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="sales_comparision_chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row gx-3">
+        <div class="col-xl-4 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <h4 class="card-title">Sales of the Month</h4>
+                <select class="form-select w-auto ms-auto py-0" aria-label="Default select example">
+                  <option selected>January 2017</option>
+                  <option value="1">February 2017</option>
+                  <option value="2">March 2017</option>
+                  <option value="3">April 2017</option>
+                </select>
+              </div>
+              <div class="d-flex justify-content-center mb-3">
+                <div class="" id="sale-of-the-month-chart"></div>
+              </div>
+              <div class="py-2">
+                <ul class="list-group list-group-horizontal">
+                  <li class="list-group-item flex-fill">
+                    <h5 class="fw-normal"><i class="fa fa-circle me-2 text-purple fs-6"></i>Organic</h5>
+                  </li>
+                  <li class="list-group-item flex-fill">
+                    <h5 class="fw-normal"><i class="fa fa-circle me-2 text-primary fs-6"></i>Marketing</h5>
+                  </li>
+                </ul>
+                <ul class="list-group list-group-horizontal">
+                  <li class="list-group-item flex-fill">
+                    <h5 class="fw-normal"><i class="fa fa-circle me-2 text-success fs-6"></i>Search Engine</h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <h4>Sales Difference</h4>
+                <select class="form-select w-auto ms-auto py-0" aria-label="Default select example">
+                  <option selected>January 2017</option>
+                  <option value="1">February 2017</option>
+                  <option value="2">March 2017</option>
+                  <option value="3">April 2017</option>
+                </select>
+              </div>
+              <div class="row mt-4">
+                <div class="col-6 d-flex align-items-center">
+                  <div>
+                    <h6 class="display-2">$4316</h6>
+                    <p class="sales">(150-165 Sales)</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div id="sale-diff-chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <h4>Sales Predictione</h4>
+                <select class="form-select w-auto ms-auto py-0" aria-label="Default select example">
+                  <option selected>January 2017</option>
+                  <option value="1">February 2017</option>
+                  <option value="2">March 2017</option>
+                  <option value="3">April 2017</option>
+                </select>
+              </div>
+              <div class="row mt-4">
+                <div class="col-6 d-flex align-items-center">
+                  <div>
+                    <h6 class="display-2">$3528</h6>
+                    <p class="sales">(150-165 Sales)</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div id="sales-prediction" class=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="user-description">
+                <div class="d-flex justify-content-xxl-center">
+                  <div><img src="./images/user/2.png" alt=""></div>
+                  <div class="ps-4">
+                    <h4 class="display-4 fw-normal mb-0">Daniel Kristeen</h4>
+                    <p class="user-work">UIUX Designer</p>
+                    <button type="button" class="btn btn-success"><i class="fas fa-plus me-2"></i>FOLLOW</button>
+                  </div>
+                </div>
+              </div>
+              <div class="py-3">
+                <div class="row">
+                  <div class="col text-center border-end">
+                    <h6 class="display-2">14</h6>
+                    <p class="user-work mb-0">Photos</p>
+                  </div>
+                  <div class="col text-center border-end">
+                    <h6 class="display-2">54</h6>
+                    <p class="user-work mb-0">Videos</p>
+                  </div>
+                  <div class="col text-center">
+                    <h6 class="display-2">145</h6>
+                    <p class="user-work mb-0">Tasks</p>
+                  </div>
+                </div>
+              </div>
+              <p class="text-muted text-center py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+            </div>
+            <div class="card-body border-top d-flex justify-content-around fs-4">
+              <a href="#"><i class="fas fa-globe"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class=" fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row gx-3">
+        <div class="col-xl-8">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <h4 class="card-title mb-0">Projects of the Month</h4>
+                <select class="form-select w-auto ms-auto py-0" aria-label="Default select example">
+                  <option selected>January 2017</option>
+                  <option value="1">February 2017</option>
+                  <option value="2">March 2017</option>
+                  <option value="3">April 2017</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th class="border-0"></th>
+                    <th scope="col" colspan="2">Assigned</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Priority</th>
+                    <th scope="col">Budget</th>
+                    <th class="border-0"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border-bottom-0"></td>
+                    <td class="ps-0">
+                      <span class="rounded rounded-circle bg-primary d-inline-block text-white text-center">S</span>
+                    </td>
+                    <td>
+                      <div>
+                        <a href="#" class="user-name">Sunil Joshi</a>
+                        <p class="user-work">Web Designer</p>
+                      </div> 
+                    </td>
+                    <td class="user-detail">Elite Admin</td>
+                    <td><span class="badge text-success bg-light-green">Low</span></td>
+                    <td class="user-detail">$3.9K</td>
+                    <td class="border-bottom-0"></td>
+                  </tr>
+                  <tr>
+                    <td class="border-bottom-0"></td>
+                    <td class="ps-0">
+                      <span><img src="./images/user/3.png" alt=""></span>
+                    </td>
+                    <td>
+                      <div>
+                        <a href="#" class="user-name">Andrew MacDownland</a>
+                        <p class="user-work">Project Manager</p>
+                      </div> 
+                    </td>
+                    <td class="user-detail">Real Homes WP Theme</td>
+                    <td><span class="badge text-primary bg-light-blue">Medium</span></td>
+                    <td class="user-detail">$24.5K</td>
+                    <td class="border-bottom-0"></td>
+                  </tr>
+                  <tr>
+                    <td class="border-bottom-0"></td>
+                    <td class="ps-0">
+                      <span class="rounded rounded-circle bg-success d-inline-block text-white text-center">C</span>
+                    </td>
+                    <td>
+                      <div>
+                        <a href="#" class="user-name">Christopher Jamil</a>
+                        <p class="user-work">SEO Manager</p>
+                      </div> 
+                    </td>
+                    <td class="user-detail">MedicalPro WP Theme</td>
+                    <td><span class="badge text-danger bg-light-red">High</span></td>
+                    <td class="user-detail">$24.5K</td>
+                    <td class="border-bottom-0"></td>
+                  </tr>
+                  <tr>
+                    <td class="border-bottom-0"></td>
+                    <td class="ps-0">
+                      <span class="rounded rounded-circle bg-purple d-inline-block text-white text-center">N</span>
+                    </td>
+                    <td>
+                      <div>
+                        <a href="#" class="user-name">Nirav Joshi</a>
+                        <p class="user-work">Frontend Engineer</p>
+                      </div> 
+                    </td>
+                    <td class="user-detail">Hosting Press HTML</td>
+                    <td><span class="badge align-middle text-success bg-light-green">Low</span></td>
+                    <td class="user-detail">$2.4K</td>
+                    <td class="border-bottom-0"></td>
+                  </tr>
+                  <tr>
+                    <td class="border-bottom-0"></td>
+                    <td class="ps-0">
+                      <span class="rounded rounded-circle bg-warning d-inline-block text-white text-center">M</span>
+                    </td>
+                    <td>
+                      <div>
+                        <a href="#" class="user-name">Micheal Doe</a>
+                        <p class="user-work">Content Writer</p>
+                      </div> 
+                    </td>
+                    <td class="user-detail">Helping Hands WP Theme</td>
+                    <td><span class="badge align-middle text-success bg-light-green">Low</span></td>
+                    <td class="user-detail">$9.3K</td>
+                    <td class="border-bottom-0"></td>
+                  </tr>
+                  <tr>
+                    <td class="border-bottom-0"></td>
+                    <td class="ps-0">
+                      <span class="rounded rounded-circle bg-danger d-inline-block text-white text-center">J</span>
+                    </td>
+                    <td>
+                      <div>
+                        <a href="#" class="user-name">Johnathan Rhodes</a>
+                        <p class="user-work">Graphic Designer</p>
+                      </div> 
+                    </td>
+                    <td class="user-detail">Digital Agency PSD</td>
+                    <td><span class="badge align-middle text-danger bg-light-red">High</span></td>
+                    <td class="user-detail">$2.6K</td>
+                    <td class="border-bottom-0"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Recent Activities</h4>
+              <div class="d-flex recent-activity">
+                <div class="me-2"><img src="./images/user/4.png" alt=""></div>
+                <div>
+                  <a href="#" class="user-activity">Julian Josephs <span>Uploaded aPhoto</span></a>
+                  <p class="date-time mb-0">10:20 AM 20 may 2016</p>
+                </div>
+              </div>
+              <div class="d-flex recent-activity">
+                <div class="me-2"><img src="./images/user/5.png" alt=""></div>
+                <div>
+                  <a href="#" class="user-activity">Daniel <span>commented on post #31</span></a>
+                  <p class="date-time mb-0">10:20 AM 20 may 2016</p>
+                </div>
+              </div>
+              <div class="d-flex recent-activity">
+                <div class="me-2"><img src="./images/user/6.png" alt=""></div>
+                <div>
+                  <a href="#" class="user-activity">Hanna Gover <span>Published post #451</span></a>
+                  <p class="date-time mb-0">10:20 AM 20 may 2016</p>
+                </div>
+              </div>
+              <div class="d-flex recent-activity">
+                <div class="me-2"><img src="./images/user/7.png" alt=""></div>
+                <div>
+                  <a href="#" class="user-activity">Sophia <span>Published post #452</span></a>
+                  <p class="date-time mb-0">10:20 AM 20 may 2016</p>
+                </div>
+              </div>
+              <div class="d-flex recent-activity">
+                <div class="me-2"><img src="./images/user/8.png" alt=""></div>
+                <div>
+                  <a href="#" class="user-activity">Krishnan <span>Modified a post #452</span></a>
+                  <p class="date-time mb-0">10:20 AM 20 may 2016</p>
+                </div>
+              </div>
+              <div class="mt-2"><a href="#" class="activity-link">Checkout Full Activities</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer text-center">All Rights Reserved by Monster Admin Template. Designed and Developed by <a href="#">Theme Designer</a>.</footer>
+    </div>
+  </div>
+
+
   <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery.min.js"></script>
   <script src="./js/custom.js"></script>
+  <script src="./apexcharts-bundle/dist/apexcharts.js"></script>
+  <script src="./js/dashboard1.js"></script>
 </body>
 
 </html>

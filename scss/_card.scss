@@ -1,0 +1,128 @@
+.card {
+    margin-bottom: $card-margin-bottom;
+    .card-body {
+        a > i {
+            font-size: 18px;
+        }
+        .text-muted {
+            font-weight: $font-weight-light;
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+        .display-1, .display-2, .display-4 {
+            color: #525c65;
+            margin-bottom: 5px;
+        }
+        .card-title {
+            font-weight: $font-weight-medium;
+            font-size: 18px;
+        }
+        .form-select {
+            padding: 4px 19px 4px 0px;
+            letter-spacing: 0.2px;
+            background-position: right 0rem center;
+        }
+        .list-group > .list-group-item > h6 {
+            color: $gray-500;
+            i {
+                font-size: 9px;
+            }
+        }
+        .sales {
+            font-size: 14px;
+            color: $gray-500;
+            font-weight: $font-weight-normal;
+        }
+        .user-work {
+            font-size: 14px;
+            color: $gray-700;
+            font-weight: $font-weight-light;
+            margin-bottom: 12px;
+        }
+        .user-description {
+            padding: 10px 10px;
+        }
+        .recent-activity {
+            padding: 18px 0;
+
+            .user-activity {
+                color:  #525c65;
+                font-weight: $font-weight-medium;
+                font-size: 15px;
+
+                span, &:hover span {
+                color: $gray-700;
+                font-weight: $font-weight-normal;
+                }
+            }
+            .date-time {
+                font-size: 13px;
+                color: #8e98a4;
+                font-weight: $font-weight-light;
+            }
+        }
+        .activity-link {
+            font-weight: $font-weight-medium;
+            font-size: 14px;
+            color: $blue;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+          
+    }
+    .user-name {
+        font-size: 14px;
+        font-weight: $font-weight-medium;
+        color: #647485;
+    }
+    .table-responsive > .table {
+        margin-bottom: 0;
+        th {
+            font-size: 14px;
+            color: #b2b9c4;
+            font-weight: $font-weight-medium;
+            padding-top: 0;
+            &:first-child, &:last-child {
+                width: 3.4%;
+            }
+            &:nth-child(3) {
+                width: 32.72%
+            }
+            &:nth-child(4) {
+                width: 19.09%
+            }
+            &:nth-child(5) {
+                width: 7.77%
+            }
+        }
+        tr {
+            td:nth-child(2) {
+                width: 38px;
+            }
+            &:last-child td {
+                border: none;
+            }
+            &:hover td:first-child{
+                border-left: 3px solid $blue;
+            }
+        }
+        .user-work {
+            color: $gray-500;
+            font-weight: $font-weight-normal;
+            font-size: 13px;
+        }
+        .user-detail {
+            font-weight: $font-weight-normal;
+            font-size: 14px;
+        }
+        
+        .rounded {
+            font-size: 14px;
+            font-weight: $font-weight-medium;
+        }
+
+    }
+}
+  

@@ -2,9 +2,14 @@
 @import 'variables';
 @import 'bootstrap/bootstrap';
 @import 'custom-variable';
+@import 'dropdown';
 @import 'notify';
 @import 'header';
 @import 'sidebar';
+@import 'common';
+@import 'buttons';
+@import 'breadcrumb';
+@import 'card';
 
 @import 'icons/font-awesome/css/fontawesome-all.css';
 @import 'icons/simple-line-icons/css/simple-line-icons.css';
@@ -12,4 +17,4 @@
 @import 'icons/themify-icons/themify-icons.css';
 @import 'icons/flag-icon-css/flag-icon.min.css';
 @import "icons/material-design-iconic-font/css/materialdesignicons.min.css";
-@import "icons/crypto-icons/cryptocoins.css"; 
+@import "icons/crypto-icons/cryptocoins.css";
