@@ -175,9 +175,6 @@
 }
 
 .left-sidebar {
-  // @include media-breakpoint-between(md,lg) {
-  //   @include small-width-sidebar;
-  // }
   @include media-breakpoint-up(sm){
     &.small-sidebar{
       @include small-width-sidebar;

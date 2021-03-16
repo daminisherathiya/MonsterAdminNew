@@ -6,7 +6,7 @@ $(function() {
     
         // small screen in tablet view
         var width = (window.innerWidth > 0) ? window.innerWidth : this.screen.width;
-        if (width<992 && width>767) {
+        if (width<992 && width>576) {
             left_sidebar.classList.add("small-sidebar");
         }
         else {
